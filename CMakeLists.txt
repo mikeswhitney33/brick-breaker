@@ -1,5 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 
+PROJECT(brick-breaker)
+
 ADD_SUBDIRECTORY(assimp)
 ADD_SUBDIRECTORY(glad)
 ADD_SUBDIRECTORY(glfw)
@@ -7,12 +9,10 @@ ADD_SUBDIRECTORY(glm)
 INCLUDE_DIRECTORIES(stb)
 
 LINK_LIBRARIES(assimp glad glfw glm)
+ADD_SUBDIRECTORY(game)
+LINK_LIBRARIES(game)
+
+ADD_SUBDIRECTORY(brick-breaker)
 
 ENABLE_TESTING()
 ADD_SUBDIRECTORY(test)
-
-#### vvvv Add subdirectory of project here vvvv ####
-
-
-
-#### ^^^^ Add subdirectory of project here ^^^^ ####
